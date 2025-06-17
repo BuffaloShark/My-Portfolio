@@ -522,6 +522,8 @@ nav {
     border-radius: 20px;
     box-shadow: 0 20px 80px 0 rgb(0, 0, 0, 0.45);
     overflow: hidden;
+    display: flex;
+    flex-direction: row;
     transition: all 600ms ease-in-out;
 }
 
@@ -624,7 +626,7 @@ SHAPES
 
 .shape {
     position: fixed;
-    width: 38px;
+    width: 30px;
     opacity: .65;
 }
 
@@ -665,6 +667,8 @@ SHAPES
     left: 80vw;
 }
 
+
+
 /* small phones, tablets, large smart phones */
 
 @media (max-width: 768px) {
@@ -686,6 +690,59 @@ SHAPES
     .modal__half {
         width: 100%;
     }
+
+    .project__wrapper {
+        display: block;
+        position: static;
+    }
+
+    .project__img {
+        display: block;
+        width: 100%;
+        height: auto;
+    }
+
+    .project__description {
+        position: static !important;
+        opacity: 1 !important;
+        display: block !important;
+        transform: none !important;
+        color: black;
+        padding: 16px;
+        margin-top: 0;
+    }
+
+    .project__wrapper--bg {
+        display: none !important;
+    }
+
+    .project__wrapper:hover .project__description {
+        opacity: 1;
+    }
+
+    .project__img {
+        width: 100%;
+        transition: none;
+    }
+
+    .project__description--link {
+        color: rgb(203, 98, 49);
+        font-size: 20px;
+        margin-right: 16px;
+    }
+
+    .project__description--title {
+        font-size: 24px;
+    }
+    
+    .project__description--sub-title {
+        margin: 8px 0;
+    }
+
+    .project:hover .project__img {
+        transform: none;
+        filter: none;
+    }
 }
 
 /* Small phones */
@@ -703,15 +760,63 @@ SHAPES
     .project__description--para {
         display: none;
     }
-    .project__description {
-        left: 0;
-        padding: 0;
+    .project__wrapper {
+        display: block;
+        position: static;
+    }
+
+    .project__img {
+        display: block;
         width: 100%;
-        text-align: center;
+        height: auto;
     }
+
+    .project__description {
+        position: static !important;
+        opacity: 1 !important;
+        display: block !important;
+        transform: none !important;
+        color: black;
+        padding: 16px;
+        margin-top: 0;
+    }
+
+    .project__wrapper--bg {
+        display: none !important;
+    }
+
+    .project__wrapper:hover .project__description {
+        opacity: 1;
+    }
+
+    .project__img {
+        width: 100%;
+        transition: none;
+    }
+
+    .project__description--link {
+        color: rgb(203, 98, 49);
+        font-size: 20px;
+        margin-right: 16px;
+    }
+
+    .project__description--title {
+        font-size: 24px;
+    }
+    
     .project__description--sub-title {
-        margin-bottom: 8px;
+        margin: 8px 0;
     }
+
+    .project__description--para {
+        font-size: 8px;
+    }
+
+    .project:hover .project__img {
+        transform: none;
+        filter: none;
+    }
+
     .modal__half {
         padding: 40px;
     }
